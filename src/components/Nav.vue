@@ -28,8 +28,8 @@
                 <router-link :to = "{ path: '/store', name:'Store'}">
                 <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Store</li>
                 </router-link>
-                <router-link :to = "{ path: '/blog', name:'Blog'}">
-                <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Blog</li>
+                <router-link :to = "{ path: '/cart', name:'Cart'}">
+                <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Cart</li>
                 </router-link>
                 <router-link :to = "{ path: '/contact', name:'Contact'}">
                 <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Contact Us</li>

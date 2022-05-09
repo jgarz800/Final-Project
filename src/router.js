@@ -5,7 +5,7 @@ import About from "./pages/about.vue";
 import Login from "./pages/login.vue";
 import Store from "./pages/store.vue";
 import Software from "./pages/software.vue";
-import Blog from "./pages/blog.vue";
+import Cart from "./pages/cart.vue";
 import Contact from "./pages/contact.vue";
 import Showcase from "./pages/showcase.vue"
 import NotFound from "./pages/404.vue";
@@ -37,9 +37,9 @@ const routes = [
     component: Software,
   },
   {
-    path: "/blog",
-    name: "Blog",
-    component: Blog,
+    path: "/cart",
+    name: "Cart",
+    component: Cart,
   },
   {
     path: "/contact",

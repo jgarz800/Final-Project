@@ -11,7 +11,7 @@
             Valve's debut title, Half-Life, was released in 1998. It won more than 50 game of the year awards, and PC Gamer even called 
             it the Best PC Game Ever.
             Since then, we've released dozens of titles that changed the world. Today, 
-            millions of people play our games every day.
+            millions of people play our games every day
         </p>
     </div>
     <div class="container flex items-center justify-between pt-5 mx-auto">
