@@ -1,3 +1,3 @@
 <template>
-    <h1>lol</h1>
+    <h1>Testomg</h1>
 </template>

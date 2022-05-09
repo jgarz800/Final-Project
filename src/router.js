@@ -2,11 +2,12 @@ import { createRouter, createWebHistory } from "vue-router";
 
 import Index from "./pages/index.vue";
 import About from "./pages/about.vue";
-import Tech from "./pages/tech.vue";
-import Merch from "./pages/merch.vue";
+import Login from "./pages/login.vue";
+import Store from "./pages/store.vue";
 import Software from "./pages/software.vue";
 import Blog from "./pages/blog.vue";
 import Contact from "./pages/contact.vue";
+import Showcase from "./pages/showcase.vue"
 import NotFound from "./pages/404.vue";
 
 const routes = [
@@ -21,14 +22,14 @@ const routes = [
     component: About,
   },
   {
-    path: "/tech",
-    name: "Tech",
-    component: Tech,
+    path: "/login",
+    name: "Login",
+    component: Login,
   },
   {
-    path: "/merch",
-    name: "Merch",
-    component: Merch,
+    path: "/store",
+    name: "Store",
+    component: Store,
   },
   {
     path: "/software",
@@ -44,6 +45,11 @@ const routes = [
     path: "/contact",
     name: "Contact",
     component: Contact,
+  },
+  {
+    path: "/showcase",
+    name: "Showcase",
+    component: Showcase,
   },
   {
     path: "/:pathMatch(.*)*",

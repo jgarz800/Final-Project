@@ -5,7 +5,7 @@
         <!--<h1 class="text-3xl font-thin tracking-tighter">Valve<span class="font-normal">Router</span></h1>-->
         <nav>
             <router-link to="/">
-                        <h1><img src="../assets/1280px-Valve_logo.svg.png" class="h-20 w-150"></h1>
+                        <h1><img src="../assets/1280px-Valve_logo.svg.png" class="h-20 w-150" style="background-image: url('https://i.pinimg.com/originals/26/6b/e8/266be8ffd47b293b5aa0f3d35c19775d.gif');"></h1>
             </router-link>
         </nav>
         
@@ -19,14 +19,14 @@
                 <router-link :to = "{ name: 'About'}">
                 <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">About</li>
                 </router-link>
-                <router-link :to = "{ path: '/tech', name:'Tech'}">
-                <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Technology</li>
+                <router-link :to = "{ path: '/login', name:'Login'}">
+                <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Login/Register</li>
                 </router-link>
                 <router-link :to = "{ path: '/software', name:'Software'}">
                 <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Software</li>
                 </router-link>
-                <router-link :to = "{ path: '/merch', name:'Merch'}">
-                <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Merch</li>
+                <router-link :to = "{ path: '/store', name:'Store'}">
+                <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Store</li>
                 </router-link>
                 <router-link :to = "{ path: '/blog', name:'Blog'}">
                 <li class="px-4 py-8 hover:cursor-pointer hover:bg-red-500 hover:text-black">Blog</li>
