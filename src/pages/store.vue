@@ -61,6 +61,7 @@
     }, computed: {
         totalCart(){
             return this.cart.reduce((cart, product) => cart + product.number, 0).toFixed(2)
+            console.log(cart[cart.length])
         },
     }
     }
@@ -69,49 +70,49 @@
 
 <template>
 <div>
-    <div class="flex flex-col items-center justify-center h-screen-nonav pb-10">
-        <h1 class="text-white text-center text-3xl font-arial bg-red-500 px-20 py-10">
+    <div class="flex flex-col items-center justify-center pb-10 h-screen-nonav">
+        <h1 class="px-20 py-10 text-3xl text-center text-white bg-red-500 font-arial">
             Store
         </h1>
     </div>
     
     <div class="container flex items-center justify-between pt-10 mx-auto">
-        <div class="text-white py-5 px-20" v-for="product in products" :key="product.name">
+        <div class="px-20 py-5 text-white" v-for="product in products" :key="product.name">
             <img :src="product.image"/>
             <div class="">{{product.name}}</div>
             <div class="">{{product.cost}}</div>
-            <button v-on:click="addItemToCart(product)" class="bg-red-500 px-2 rounded hover:bg-red-400">Add to Cart</button>
+            <button v-on:click="addItemToCart(product)" class="px-2 bg-red-500 rounded hover:bg-red-400">Add to Cart</button>
         </div>
     </div>
 </div>
 
 <div>
     <div class="container flex items-center justify-between pt-10 mx-auto">
-        <div class="text-white py-5 px-20" v-for="mousepad in mousepads" :key="mousepad.name">
+        <div class="px-20 py-5 text-white" v-for="mousepad in mousepads" :key="mousepad.name">
             <img :src="mousepad.image"/>
             <div class="">{{mousepad.name}}</div>
             <div class="">{{mousepad.cost}}</div>
-            <button v-on:click="addItemToCart(mousepad)" class="bg-red-500 px-2 rounded hover:bg-red-400">Add to Cart</button>
+            <button v-on:click="addItemToCart(mousepad)" class="px-2 bg-red-500 rounded hover:bg-red-400">Add to Cart</button>
         </div>
     </div>
 </div>
 
-<div class="flex flex-col items-center justify-center h-screen-nonav pb-10">
-        <h1 class="text-white text-center text-3xl font-arial bg-red-500 px-20 py-10 rounded-lg">
+<div class="flex flex-col items-center justify-center pb-10 h-screen-nonav">
+        <h1 class="px-20 py-10 text-3xl text-center text-white bg-red-500 rounded-lg font-arial">
             Cart
         </h1>
-        <h2 class="text-white text-center text-3xl font-arial px-20 py-10">
-            Total Cost: {{totalCart}}
+        <h2 class="px-20 py-10 text-3xl text-center text-white font-arial">
+            Total Cost: ${{totalCart}}
         </h2>
     </div>
 
     <div class="container flex items-center justify-between pt-10 mx-auto">
-        <div class="text-white py-5 px-20" v-for="product in cart" :key="product.name">
+        <div class="px-20 py-5 text-white" v-for="product in cart" :key="product.name">
 
             <img :src="product.image">
             <div class="">{{product.name}}</div>
-            <div class=" text-black px-1 bg-white rounded">{{product.cost}}</div>
-            <button v-on:click="removeItemFromCart(cart)" class="bg-red-500 px-2 rounded hover:bg-red-400">Remove From Cart</button>
+            <div class="text-black bg-white rounded ">{{product.cost}}</div>
+            <button v-on:click="removeItemFromCart(cart)" class="px-2 bg-red-500 rounded hover:bg-red-400">Remove From Cart</button>
         </div>
 
     </div>

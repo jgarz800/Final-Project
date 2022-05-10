@@ -1,14 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
+import useAuth from './composables/useAuth'
 
 import Index from "./pages/index.vue";
 import About from "./pages/about.vue";
 import Login from "./pages/login.vue";
 import Store from "./pages/store.vue";
 import Software from "./pages/software.vue";
-import Cart from "./pages/cart.vue";
+import Blog from "./pages/blog.vue";
 import Contact from "./pages/contact.vue";
 import Showcase from "./pages/showcase.vue"
 import NotFound from "./pages/404.vue";
+
+const {isAuthenticated} = useAuth();
 
 const routes = [
   {
@@ -37,9 +40,17 @@ const routes = [
     component: Software,
   },
   {
-    path: "/cart",
-    name: "Cart",
-    component: Cart,
+    path: "/blog",
+    name: "Blog",
+    component: Blog,
+    beforeEnter: (to, from, next) => {
+      if (!isAuthenticated.value){
+        next("/login")
+      }
+      else{
+        next();
+      }
+    },
   },
   {
     path: "/contact",
