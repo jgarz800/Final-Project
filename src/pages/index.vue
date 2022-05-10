@@ -35,7 +35,7 @@
 
     <div class="flex flex-col items-center justify-center py-8 bg-black h-screen-nonav">
         <nav>
-            <router-link :to = "{ path: '/login', name:'Login'}">
+            <router-link :to = "{ path: '/software', name:'Software'}">
                 <h1 class="px-20 py-5 text-3xl font-semibold tracking-tighter bg-red-500 text-black-500 hover:bg-black hover:text-red-500">Software</h1>
             </router-link>
         </nav>
